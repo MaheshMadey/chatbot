@@ -1,0 +1,146 @@
+.chat-container {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #1a1b26;
+  min-height: 100vh;
+  color: #a9b1d6;
+}
+
+.chat-header {
+  text-align: center;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #7aa2f7, #bb9af7);
+  color: #1a1b26;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.messages-container {
+  background: #24283b;
+  padding: 1.2rem;
+  border-radius: 12px;
+  height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+  scrollbar-color: #414868 #24283b;
+}
+
+.messages-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: #24283b;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background-color: #414868;
+  border-radius: 4px;
+}
+
+.message {
+  margin-bottom: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.message-content {
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-message .message-content {
+  background: #7aa2f7;
+  color: #1a1b26;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bot-message .message-content {
+  background: #414868;
+  color: #a9b1d6;
+  border-bottom-left-radius: 4px;
+}
+
+.input-container {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.message-input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #414868;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background: #24283b;
+  color: #a9b1d6;
+}
+
+.message-input:focus {
+  border-color: #7aa2f7;
+}
+
+.message-input::placeholder {
+  color: #565f89;
+}
+
+.send-button {
+  padding: 0.8rem 1.5rem;
+  background: #7aa2f7;
+  color: #1a1b26;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+  background: #bb9af7;
+}
+
+.send-button:active {
+  transform: translateY(1px);
+}
+
+.send-button:disabled {
+  background: #414868;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
