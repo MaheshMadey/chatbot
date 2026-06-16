@@ -134,6 +134,13 @@
   cursor: not-allowed;
 }
 
+.error-message {
+  color: #f7768e;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

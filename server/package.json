@@ -1,23 +1,21 @@
 {
-  "name": "server",
+  "name": "chatbot-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express backend for AI chatbot powered by Google Gemini",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
+  "author": "Mahesh Madey",
+  "license": "MIT",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "langchain": "^1.0.3",
-    "multer": "^2.0.2",
-    "pdf-parse": "^2.4.5"
+    "express": "^5.1.0"
   }
 }
